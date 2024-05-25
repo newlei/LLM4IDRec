@@ -38,8 +38,10 @@ cd LLM4IDRec
 cd LLM4IDRec
 #Data preprocessing: we utilized the Llama2 tokenizer to process the data.
 bash tokenize.sh
+
 #Fine-turning LLM: we employ LoRA as an efficient means to fine-turning pretrained LLM.
 bash lora_tuning.sh
+
 #Inference for data generation
 bash predict.sh
 ```
