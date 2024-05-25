@@ -50,6 +50,14 @@ bash predict.sh
 
 We use the Llama 2-7B. Please obtain and deploy the Llama 2-7B locally from the [link](https://github.com/meta-llama/llama)
 
+Generating training data by prompt template
+```python
+#!./LLM4IDRec
+cd LLM4IDRec
+python data_process.py
+```
+
+
 
 
 
