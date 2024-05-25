@@ -52,7 +52,7 @@ def generate_data(train_data_path,output_json,test_flag=False):
                 pos_str +='i'+positive_list[i_pos]+','
             pos_str = pos_str[:-1]
             
-            str_out = {"q": f"Given the user({user_id})'s clicked list items:{preference_str}, predict what are items to recommend to the user({user_id}).","a": f"The items:{pos_str}"}  
+            str_out = {"q": f"Given the user({user_id})'s clicked list items:{preference_str}, predict what is the list items to recommend to the user({user_id}). Please only answer the item IDs.","a": f"{target_preference_str}"}
             json.dump(str_out, f_output)
             f_output.write("\n")
             f_output.flush() 
