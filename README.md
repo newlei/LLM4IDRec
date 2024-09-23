@@ -64,7 +64,7 @@ cp augmented_data_yelp.txt ./SELFRec/dataset/yelp2018/train.txt
 # runing SimGCL model as example
 cd SELFRec
 python main.py
-# Enter ‘SimGCL’ in the terminal to run SimGCL
+# Enter ‘SimGCL’ in the terminal to run SimGCL. Similarly, input various model names to run different models.
 ```
 
 For P5, we use the code [link](https://github.com/agiresearch/OpenP5)
