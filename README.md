@@ -45,6 +45,38 @@ bash lora_tuning.sh
 #Inference for data generation
 bash predict.sh
 ```
+### Data Filter and Run Recommendation model
+
+We are doing data augmentation and do not rely on specific recommendation models. The recommendation model uses open-source frameworks and code.
+
+For BPR、SimGCL、NCL、XSimGCL、SASRec、BERT4Rec and CL4SRec, we use the open-source frameworks from the [link](https://github.com/Coder-Yu/SELFRec)
+```bash
+git clone https://github.com/Coder-Yu/SELFRec.git
+# replace the data by augmented data, and yelp as an example
+cp augmented_data_yelp.txt ./SELFRec/dataset/yelp2018/train.txt
+# runing SimGCL model as example
+cd SELFRec
+python main.py
+#Enter ‘SimGCL’ in the terminal to run SimGCL
+```
+
+For P5, we use the code [link](https://github.com/agiresearch/OpenP5)
+```bash
+git clone https://github.com/agiresearch/OpenP5.git
+# replace the data by augmented data, and yelp as an example
+cp augmented_data_yelp.txt ./OpenP5/data/yelp
+#Use the OpenP5 usage steps to generate data and run the model.
+```
+
+
+For CID+IID, we use the code [link](https://github.com/Wenyueh/LLM-RecSys-ID)
+```bash
+git clone https://github.com/Wenyueh/LLM-RecSys-ID.git
+cp augmented_data_yelp.txt ./LLM-RecSys-ID/data/yelp
+#Follow the running script from the code [link](https://github.com/Wenyueh/LLM-RecSys-ID) to generate data and execute the CID+IID.
+```
+
+
 
 ### Note
 
@@ -56,7 +88,6 @@ Generating training data by prompt template
 cd LLM4IDRec
 python data_process.py
 ```
-
 
 
 
