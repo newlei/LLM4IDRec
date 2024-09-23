@@ -45,7 +45,14 @@ bash lora_tuning.sh
 #Inference for data generation
 bash predict.sh
 ```
-### Data Filter and Run Recommendation model
+### Run Recommendation model
+
+After generating data by LLM4IDRec, you need to process and extract the corresponding interaction data, which can be achieved with the following script:
+```bash
+python generate_data_process.py
+
+```
+
 
 We are doing data augmentation and do not rely on specific recommendation models. The recommendation model uses open-source frameworks and code.
 
@@ -57,7 +64,7 @@ cp augmented_data_yelp.txt ./SELFRec/dataset/yelp2018/train.txt
 # runing SimGCL model as example
 cd SELFRec
 python main.py
-#Enter ‘SimGCL’ in the terminal to run SimGCL
+# Enter ‘SimGCL’ in the terminal to run SimGCL
 ```
 
 For P5, we use the code [link](https://github.com/agiresearch/OpenP5)
@@ -65,7 +72,7 @@ For P5, we use the code [link](https://github.com/agiresearch/OpenP5)
 git clone https://github.com/agiresearch/OpenP5.git
 # replace the data by augmented data, and yelp as an example
 cp augmented_data_yelp.txt ./OpenP5/data/yelp
-#Use the OpenP5 usage steps to generate data and run the model.
+# Use the OpenP5 usage steps to generate data and run the model.
 ```
 
 
@@ -73,7 +80,7 @@ For CID+IID, we use the code [link](https://github.com/Wenyueh/LLM-RecSys-ID)
 ```bash
 git clone https://github.com/Wenyueh/LLM-RecSys-ID.git
 cp augmented_data_yelp.txt ./LLM-RecSys-ID/data/yelp
-#Follow the running script from the code [link](https://github.com/Wenyueh/LLM-RecSys-ID) to generate data and execute the CID+IID.
+# Follow the running script from the code [link](https://github.com/Wenyueh/LLM-RecSys-ID) to generate data and execute the CID+IID.
 ```
 
 
