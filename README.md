@@ -1,5 +1,5 @@
 # LLM4IDRec
-Enhancing ID-based Recommendation with Large Language Models
+Enhancing ID-based Recommendation with Large Language Models(TOIS)
 
 <img width="774" alt="image" src="https://github.com/newlei/LLM4IDRec/assets/16752732/7ba84429-fe23-4bc1-bf4a-7639e5bcb7ab">
 
